@@ -41,3 +41,7 @@ Compare the hashes a build embedded with this table.
 
 A verifier embeds every file in `roots/` at build time. The Peios kernel
 and ppk are the verifiers that do.
+
+A verifier written in Rust depends on this repository as a crate, pinned
+by commit, and reads `pso_roots::ROOTS`. A root added to `roots/` is also
+added to `src/lib.rs`, and a test fails if the two differ.

@@ -1,0 +1,7 @@
+[package]
+name = "pso-roots"
+description = "The public root keys of Peios Signed Objects"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+publish = false

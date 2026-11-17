@@ -13,11 +13,18 @@ pso-public-key ml-dsa-87 <key in hexadecimal>
 
 ## The roots
 
-No root has been published.
+Both roots are **provisional**. They are for building and testing before
+the public release, and will be replaced before it. Nothing that depends
+on them is a production build, and every top-level they sign stops
+verifying when they are replaced.
 
-Each root is listed here by its key hash when it is added, so that what a
-build embedded can be compared with what this repository holds. `pso key
-public` prints a key's hash.
+| File | Type | Key hash |
+|---|---|---|
+| `roots/peios-root-1.pub` | ML-DSA-87 | `f37aa6246e0370d6ef5b0f040e0cb5a3cbebf91488c41c9044b240253a79a328381353a6e9d4a8155cd185120bbf768f45a9e640757cda1c446da5905bb3ad41` |
+| `roots/peios-root-2.pub` | ML-DSA-87 | `c5e0034559e7566bab7be171ca65d413d258f369c9d78ee78ee1ed629b8116a12c765bf15eed58f5eca5e21d91d8183bc94eb43aa44e7384a89aa3b7b0c4a726` |
+
+A root's key hash is the SHA-512 of its key type byte followed by its key.
+Compare the hashes a build embedded with this table.
 
 ## Rules
 
